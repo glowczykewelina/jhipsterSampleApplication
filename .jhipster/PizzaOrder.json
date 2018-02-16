@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pizzawithsize",
+            "otherEntityName": "pizzaWithSize",
+            "otherEntityRelationshipName": "pizzaOrder"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "total",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180216133823",
+    "entityTableName": "pizza_order",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "pizzaWithSize",
+            "otherEntityName": "pizzaWithSize",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "basePrice",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "isVegan",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isSpicy",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "number",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180216133821",
+    "entityTableName": "pizza",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
