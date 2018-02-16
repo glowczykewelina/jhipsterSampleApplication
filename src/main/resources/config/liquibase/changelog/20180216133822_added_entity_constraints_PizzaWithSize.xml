@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity PizzaWithSize.
+    -->
+    <changeSet id="20180216133822-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="pizza_order_id"
+                                 baseTableName="pizza_with_size"
+                                 constraintName="fk_pizza_with_size_pizza_order_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pizza_order"/>
+
+    </changeSet>
+</databaseChangeLog>
