@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pizza",
+            "otherEntityName": "pizza",
+            "otherEntityRelationshipName": "pizzaWithSize"
+        },
+        {
+            "relationshipName": "pizzaOrder",
+            "otherEntityName": "pizzaOrder",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "size",
+            "fieldType": "Size",
+            "fieldValues": "MEDIUM,LARGE,HUGE"
+        }
+    ],
+    "changelogDate": "20180216134043",
+    "entityTableName": "pizza_with_size",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}
