@@ -1,0 +1,30 @@
+entity Pizza {
+	name String,
+    basePrice Long,
+    isVegan Boolean,
+    isSpicy Boolean,
+    number Integer,	
+}
+
+enum Size {
+	MEDIUM, LARGE, HUGE
+}
+
+entity PizzaWithSize {
+	size Size
+}
+
+
+entity PizzaOrder {
+	total Double
+}
+
+relationship OneToMany {
+	PizzaOrder{pizzawithsize} to PizzaWithSize,
+    PizzaWithSize{pizza} to Pizza
+}
+
+service all with serviceImpl
+
+dto * with mapstruct
+
