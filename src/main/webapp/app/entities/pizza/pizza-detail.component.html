@@ -1,0 +1,48 @@
+
+<div *ngIf="pizza">
+    <h2><span>Pizza</span> {{pizza.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{pizza.name}}</span>
+        </dd>
+        <dt><span>Base Price</span></dt>
+        <dd>
+            <span>{{pizza.basePrice}}</span>
+        </dd>
+        <dt><span>Is Vegan</span></dt>
+        <dd>
+            <span>{{pizza.isVegan}}</span>
+        </dd>
+        <dt><span>Is Spicy</span></dt>
+        <dd>
+            <span>{{pizza.isSpicy}}</span>
+        </dd>
+        <dt><span>Number</span></dt>
+        <dd>
+            <span>{{pizza.number}}</span>
+        </dd>
+        <dt><span>Pizza With Size</span></dt>
+        <dd>
+            <div *ngIf="pizza.pizzaWithSizeId">
+                <a [routerLink]="['/pizza-with-size', pizza.pizzaWithSizeId]">{{pizza.pizzaWithSizeId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'pizza/'+ pizza.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
